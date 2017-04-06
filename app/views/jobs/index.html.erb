@@ -3,6 +3,18 @@
 </div>
 
 <table class="table table-boldered">
+  <thead>
+    <tr>
+      <th>职位</th>
+      <th>薪资上线</th>
+      <th>薪资下限</th>
+      <th>联系方式</th>
+      <th>动作</th>
+      <th>发布时间</th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @jobs.each do |job| %>
   <tr>
     <td>
@@ -26,4 +38,5 @@
     </td>
   </tr>
   <% end %>
+  </tbody>
 </table>
