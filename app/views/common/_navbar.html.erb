@@ -47,22 +47,26 @@
         <a href="#" class="navbar-link">Hello Air</a>
       </p>
 
+      <!-- for devise -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link4</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown5 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
+        <% if !current_user %>
+            <li><%= link_to("注册", new_user_registration_path) %> </li>
+            <li><%= link_to("登入", new_user_session_path) %></li>
+        <% else %>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Hi!, <%= current_user.email %>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
+                </ul>
+            </li>
+        <% end %>
+       </ul>
+       <!-- /. for devise -->
     </div>
     <!-- /.navbar-collapse -->
-
   </div>
   <!-- /.container-fluid -->
 </nav>
