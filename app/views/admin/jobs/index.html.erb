@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Received</th>
       <th>Wage Upper</th>
       <th>Wage Lower</th>
       <th>Contact Email</th>
@@ -21,6 +22,7 @@
       <%= render_admin_job_status(job) %>
       <%= link_to(job.title, admin_job_path(job)) %>
     </td>
+    <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>
     <td><%= job.wage_upper_bound %></td>
     <td><%= job.wage_lower_bound %></td>
     <td><%= job.contact_email %></td>
