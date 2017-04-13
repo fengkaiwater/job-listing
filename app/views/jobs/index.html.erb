@@ -1,9 +1,24 @@
 <table class="table table-boldered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Wage Upper</th>
+      <th>Wage Lower</th>
+      <th>Contact Email</th>
+      <th>Action</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @jobs.each do |job| %>
   <tr>
     <td>
       <%= link_to(job.title, job_path(job)) %>
     </td>
+    <td><%= job.wage_upper_bound %></td>
+    <td><%= job.wage_lower_bound %></td>
+    <td><%= job.contact_email %></td>
     <td>
       <%= link_to("Edit", edit_job_path(job)) %>
       |
@@ -14,4 +29,5 @@
     </td>
   </tr>
   <% end %>
+  </tbody>
 </table>
