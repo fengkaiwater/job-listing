@@ -8,7 +8,15 @@ class Admin::JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.all.order("created_at DESC")
+    @jobs = Job.all
+    @jobs = case params[:order]
+    when 'by_lower_bound'
+      Job.order('wage_lower_bound DESC')
+    when 'by_upper_bound'
+      Job.order('wage_upper_bound DESC')
+    else
+      Job.recent
+    end
   end
 
   def new
