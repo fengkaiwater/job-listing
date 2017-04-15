@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* jumbotron */
 .jumbotron {
   background-image:url('http://y.photo.qq.com/img?s=wzxhkiOYJ&l=y.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
-
 }
 
 .title-hello {
@@ -26,13 +26,17 @@
 .join {
   text-align: right;
 }
-
+/* end jumbotron */
 
 /* for three section */
 .caption {
   margin: 30px;
   text-align: center;
   top: 20px;
+}
+.caption_detail {
+  font-family: "Helvetivca Neue", "Microsoft Yahei";
+  font-size: 18px;
 }
 
 .rounded1 {
@@ -44,28 +48,28 @@
 }
 
 .rounded3 {
-  margin-top: 20px;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+
+.caption3 {
+  margin-left: 40px;
 }
 /* end for three section */
 
 /* for rest */
 .rest-room {
-  background-image:url('https://i.ytimg.com/vi/Y2DGcPC2Y10/maxresdefault.jpg');
+  background-image:url('http://y.photo.qq.com/img?s=CrLkFRW47&l=y.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 510px;
-  padding-top: 20px;
-  background-color: #faf7eb;
-
-  margin-top: 0px;
-
+  padding-bottom: 530px;
 }
 
 .rest {
   margin: 1em 0em;
   padding: 1em 1em;
   text-align: center;
-  image-size: 600*600;
+
 }
 /* end rest */
 
