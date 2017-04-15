@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .jumbotron {
-  background-image:url('http://y.photo.qq.com/img?s=MieOYXR52&l=y.jpg');
+  background-image:url('http://y.photo.qq.com/img?s=wzxhkiOYJ&l=y.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
+
 }
 
 .title-hello {
@@ -45,3 +46,31 @@
 .rounded3 {
   margin-top: 20px;
 }
+/* end for three section */
+
+/* for rest */
+.rest-room {
+  background-image:url('https://i.ytimg.com/vi/Y2DGcPC2Y10/maxresdefault.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 510px;
+  padding-top: 20px;
+  background-color: #faf7eb;
+
+  margin-top: 0px;
+
+}
+
+.rest {
+  margin: 1em 0em;
+  padding: 1em 1em;
+  text-align: center;
+  image-size: 600*600;
+}
+/* end rest */
+
+/* my-pic */
+.my-room {
+margin: 0em -1.1em;
+}
+/* end my-pic*/
