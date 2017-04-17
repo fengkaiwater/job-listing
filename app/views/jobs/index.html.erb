@@ -23,7 +23,6 @@
       <th>薪资上线</th>
       <th>薪资下限</th>
       <th>联系方式</th>
-      <th>动作</th>
       <th>发布时间</th>
     </tr>
   </thead>
@@ -42,10 +41,6 @@
     </td>
     <td>
       <%= job.contact_email %>
-    </td>
-    <td>
-      <%= link_to("Edit", edit_job_path(job)) %> |
-      <%= link_to("Destroy", job_path(job), :method => :delete, :data => { :comfirm => "Are you sure?" }) %>
     </td>
     <td>
       <%= job.created_at %>
