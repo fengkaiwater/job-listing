@@ -10,10 +10,10 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
     <li>
-      <%= link_to("Wage lower bound", admin_jobs_path(:order => "by_lower_bound")) %>
+      <%= link_to("Wage upper bound", admin_jobs_path(:order => "by_upper_bound")) %>
     </li>
     <li>
-      <%= link_to("Wage upper bound", admin_jobs_path(:order => "by_upper_bound")) %>
+      <%= link_to("Wage lower bound", admin_jobs_path(:order => "by_lower_bound")) %>
     </li>
     <li>
       <%= link_to("Created Time", admin_jobs_path) %>
@@ -28,8 +28,8 @@
     <tr>
       <th>Job</th>
       <th>Resume Count</th>
-      <th>Wage_lower_bound</th>
       <th>wage_upper_bound</th>
+      <th>Wage_lower_bound</th>
       <th>Manage Item</th>
       <th>Created_at</th>
     </tr>
@@ -41,9 +41,9 @@
       <%= render_job_status(job) %>
       <%= link_to(job.title, admin_job_path(job)) %>
     </td>
-    <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>
-    <td><%= job.wage_lower_bound %></td>
+    <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>  
     <td><%= job.wage_upper_bound %></td>
+    <td><%= job.wage_lower_bound %></td>
     <td>
       <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-primary") %>
       |
