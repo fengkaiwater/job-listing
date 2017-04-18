@@ -153,11 +153,30 @@
 
 //------footer-------
 footer {
-    color: white;
+  color: white;
+  position: absolute; //绝对位置
+  bottom: 0;
+  width: 100%; //footer长度
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
 
 footer .footer-below {
     padding: 25px 0;
     background-color: #364c63;
 }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+/* end Sticky footer styles
+-------------------------------------------------- */
+
 //------end footer------
