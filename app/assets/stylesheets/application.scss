@@ -107,12 +107,9 @@
 
 /* navbar */
 .navbar {
-  background-color: #dcdacb;
-  margin-bottom: 0px;
-}
-
-.search-bar {
-
+  background-color: #dcdacb; //背景颜色
+  margin-bottom: 0px; //底部 margin 不撑开距离
+  border-radius: 0; //去掉圆角
 }
 /* end navbar */
 
