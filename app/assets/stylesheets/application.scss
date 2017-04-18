@@ -149,15 +149,15 @@
     background-color: #FFE0B2;
     color: #212121;
 }
+//------end navbar------
 
-/* navbar
-.navbar {
-  background-color: #dcdacb; //背景颜色
-  margin-bottom: 0px; //底部 margin 不撑开距离
-  border-radius: 0; //去掉圆角
+//------footer-------
+footer {
+    color: white;
 }
-end navbar */
 
-.footerbar {
-  margin-bottom: 100px;
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #364c63;
 }
+//------end footer------
