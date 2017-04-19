@@ -3,12 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* first section */
-
 .box {
-   background-image: url('http://y.photo.qq.com/img?s=wzxhkiOYJ&l=y.jpg');
-   background-repeat: no-repeat;
-   background-size: cover;
-   margin-bottom: 10px;
+  background-image: url('http://y.photo.qq.com/img?s=wzxhkiOYJ&l=y.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
 
    .box-inner {
 
@@ -41,30 +40,39 @@
 }
 /* end first section */
 
-/* second-part */
-.second-back {
-  background-color: #f2f2f2;
-  margin-top: -30px;
+/* content-section-a */
+.content-section-a {
+  padding: 50px 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f6f6f6;
+
 }
 
-.second-part {
-  text-align: center;
-  margin-left: 220px;
-  margin-bottom: 35px;
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+  margin-top: 80px;
 }
 
-.second-font {
-  margin-top: 55px;
-}
-
-.second-part_detail {
-  font-family: "Helvetivca Neue", "Microsoft Yahei";
+.lead {
   font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 100px;
 }
-/* end rest */
 
-/* for three section */
+.col-lg-5 {
+  padding-top: 80px;
+}
 
+/* end content-section-a */
+
+/* content-section-b */
+.content-section-b {
+    padding: 5px 0 30px 0;
+    background-color: white;
+}
 
 .caption {
   margin: 30px;
@@ -80,7 +88,7 @@
   margin-top: 80px;
 }
 
-.circle2 {
+.rounded2 {
   margin-top: 110px;
 }
 
@@ -91,30 +99,35 @@
 
 .caption3 {
   margin-left: 40px;
+}
+
+.caption3-font {
+  margin-left: 35px;
+}
+
+.caption_detail3 {
   font-family: "Helvetivca Neue", "Microsoft Yahei";
   font-size: 18px;
 }
+/* end content-section-b */
 
-/* end for three section */
-
-/* for rest */
-.rest-room {
+/* content-section-c */
+.content-section-c {
   background-image:url('http://y.photo.qq.com/img?s=CrLkFRW47&l=y.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 530px;
 }
 
-.rest {
+.work {
   margin: 1em 0em;
   padding: 1em 1em;
   text-align: center;
-
 }
-/* end rest */
+/* end content-section-c */
 
-/* my-pic */
-.my-room {
+/* content-section-d */
+.my-pic {
 margin: 0em -1.1em;
 }
-/* end my-pic*/
+/* end content-section-d */
