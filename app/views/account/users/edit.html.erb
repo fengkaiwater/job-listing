@@ -1,0 +1,9 @@
+<h2>Edit my files</h2>
+<%= simple_form_for [:account, @user] do |f| %>
+<div>
+  <%= f.input :username, :label => "Username" %>
+  <%= f.input :email, :label => "E-mail" %>
+  <%= link_to("Cancel update", account_users_path, class: "btn btn-default") %>
+  <%= f.submit "Submit", class: "btn btn-danger" %>
+</div>
+<% end %>

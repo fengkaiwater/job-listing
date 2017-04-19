@@ -8,4 +8,12 @@ class User < ApplicationRecord
   end
 
   has_many :resumes
+
+  def display_username
+    if self.username.present?
+      self.username
+    else
+      self.email
+    end
+  end
 end
