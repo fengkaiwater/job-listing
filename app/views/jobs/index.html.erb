@@ -1,51 +1,66 @@
-<div class="dropdown clearfix pull-right">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Sort
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li>
-      <%= link_to("Wage lower bound", jobs_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("Wage upper bound", jobs_path(:order => "by_upper_bound")) %>
-    </li>
-    <li>
-      <%= link_to("Created Time", jobs_path) %>
-    </li>
-  </ul>
+<!-- job content -->
+<div class="col-md-10 col-md-offset-1 job-content">
+  <div class="btn-group select-job-box">
+    <!-- title dropdown -->
+    <div class="dropdown btn-group clearfix">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        职位
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+        <li>
+          <%= link_to("Wage lower bound", jobs_path(:order => "by_lower_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Wage upper bound", jobs_path(:order => "by_upper_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Created Time", jobs_path) %>
+        </li>
+      </ul>
+    </div>
+    <!-- /.title dropdown -->
+
+    <!-- wage dropdown -->
+    <div class="dropdown btn-group clearfix">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        月薪
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+        <li>
+          <%= link_to("Wage lower bound", jobs_path(:order => "by_lower_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Wage upper bound", jobs_path(:order => "by_upper_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Created Time", jobs_path) %>
+        </li>
+      </ul>
+    </div>
+    <!-- /.wage dropdown -->
+  </div>
 </div>
+<!-- /.jop content-->
 
-<table class="table table-boldered">
-  <thead>
-    <tr>
-      <th>职位</th>
-      <th>薪资上限</th>
-      <th>薪资下限</th>
-      <th>联系方式</th>
-      <th>发布时间</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<!-- job list -->
+<div class="main-box">
   <% @jobs.each do |job| %>
-  <tr>
-    <td>
-      <%= link_to(job.title, job_path(job)) %>
-    </td>
-    <td>
-      <%= job.wage_upper_bound %>
-    </td>
-    <td>
-      <%= job.wage_lower_bound %>
-    </td>
-    <td>
-      <%= job.contact_email %>
-    </td>
-    <td>
-      <%= job.created_at %>
-    </td>
-  </tr>
+
+    <div class="col-md-9 col-xs-9 job-box row">
+      <!-- title message -->
+      <div class="info">
+        <div class="info-top">
+          <h3><%= link_to(job.title, job_path(job))%></h3>
+          <span><%= job.created_at.strftime("%Y-%m-%d") %></span>
+        </div>
+        <div class="info-mid">
+          <%= job.wage_lower_bound %> k ~ <%= job.wage_upper_bound %> k
+        </div>
+      </div>
+    </div>
+
   <% end %>
-  </tbody>
-</table>
+</div>
+<!-- /.job listing -->
