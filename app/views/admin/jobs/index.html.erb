@@ -1,64 +1,54 @@
-<div class="pull-right">
-  <%= link_to("Add a job", new_admin_job_path, :class => "btn btn-primary" ) %>
-</div>
-<br/>
-<br/>
-<div class="dropdown clearfix pull-right">
-  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Sort By
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li>
-      <%= link_to("Wage upper bound", admin_jobs_path(:order => "by_upper_bound")) %>
-    </li>
-    <li>
-      <%= link_to("Wage lower bound", admin_jobs_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("Created Time", admin_jobs_path) %>
-    </li>
-  </ul>
-</div>
+<div class="col-md-12">
+  <div class="job" style="margin-top:6px;">
+    <%= link_to("Add a job", new_admin_job_path, class: "btn btn-primary pull-right action-btn") %>
+  </div>
 
-<br><br>
-
-<table class="table table-boldered table-striped admintab">
-  <thead>
-    <tr>
-      <th>Job</th>
-      <th>Resume Count</th>
-      <th>wage_upper_bound</th>
-      <th>Wage_lower_bound</th>
-      <th>Manage Item</th>
-      <th>Created_at</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @jobs.each do |job| %>
-  <tr>
-    <td>
-      <%= render_job_status(job) %>
-      <%= link_to(job.title, admin_job_path(job)) %>
-    </td>
-    <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>
-    <td><%= job.wage_upper_bound %></td>
-    <td><%= job.wage_lower_bound %></td>
-    <td>
-      <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-primary") %>
-      |
-      <%= link_to("Destroy", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger",:data => { :confirm => "Are you sure?" }) %>
-      |
-      <% if job.is_hidden %>
-        <%= link_to("Publish", publish_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-success") %>
-      <% else %>
-        <%= link_to("Hide", hide_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-warning") %>
+  <!-- adimn job -->
+  <div class="admin-job-box">
+  <% if @jobs.length > 0 %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>招聘职位</td>
+        <td>简历数量</td>
+        <td>发布时间</td>
+        <td>操作</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @jobs.each do |job| %>
+      <tr class="job-list">
+        <td></span> <%= link_to(job.description, admin_job_path(job)) %></td>
+        <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>
+        <td><%= job.created_at.strftime("%Y-%m-%d") %></td>
+        <td>
+          <!-- edit/delete/hidden job -->
+          <div class="action-box">
+          <%= link_to(edit_admin_job_path(job), class: "btn btn-md btn-default") do %>
+            <sapn class="fa fa-file-text" aria-hidden="true"></sapn>
+          <% end %>
+          <%= link_to(admin_job_path(job), class: "btn btn-md btn-default", method: :delete, data: { confirm: "确定删除此职位？" } ) do%>
+            <sapn class="fa fa-trash"></sapn>
+          <% end %>
+          <% if job.is_hidden %>
+            <%= link_to(publish_admin_job_path(job), :method => :post, class: "btn btn-md btn-default") do %>
+              <sapn class="fa fa-lock"></sapn>
+            <% end %>
+          <% else %>
+            <%= link_to(hide_admin_job_path(job), :method => :post, class: "btn btn-md btn-default show-btn") do %>
+              <sapn class="fa fa-unlock"></sapn>
+            <% end %>
+          <% end %>
+          </div>
+          <!-- /.edit/delete/hidden job  -->
+        </td>
+      </tr>
       <% end %>
-    </td>
-    <td>
-      <%= job.created_at %>
-    </td>
-  </tr>
+    </tbody>
+  </table>
+  <% else %>
+    <h3 class="no-data">目前尚未发布任何职位!</h3>
   <% end %>
-  </tbody>
-</table>
+  </div>
+  <!-- /.admin job -->
+</div>
