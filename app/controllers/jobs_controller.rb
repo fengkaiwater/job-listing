@@ -12,14 +12,14 @@ class JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.where(:is_hidden => false).order("created_at DESC").paginate(:page => params[:page], :per_page => 5 )
+    @jobs = Job.where(:is_hidden => false).order("created_at DESC").paginate(:page => params[:page], :per_page => 8 )
     @jobs = case params[:order]
     when 'by_lower_bound'
-      Job.published.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 5 )
+      Job.published.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 8 )
     when 'by_upper_bound'
-      Job.published.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 5 )
+      Job.published.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 8 )
     else
-      Job.published.recent.paginate(:page => params[:page], :per_page => 5 )
+      Job.published.recent.paginate(:page => params[:page], :per_page => 8 )
     end
   end
 
