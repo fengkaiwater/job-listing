@@ -2,15 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//------job content------
+//------ job content ------
 .job-content{
   margin-top: 50px;
   a{
     text-decoration: none; //如果不加此段代码，第一个job的title将会闪烁
   }
 }
+//------ end job content ------
 
-//------job------
+//------ job ------
 .main-box {
   margin-left: 75px; // temporary deal with the whole page as it close to left blank of browse
 }
@@ -50,3 +51,71 @@
   letter-spacing: -1px;
 }
 }
+
+.job-bottom {       // will_paginate
+  margin-top: 16px;
+  margin-bottom: 25px;
+}
+//------ end job ------
+
+//------ Job#Show ------
+.job-info-box{
+  color: #333;
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+
+  p{
+    font-size: 16px;
+    color: #666;
+  }
+
+  .wage{
+    color: #FF7D0A;
+    letter-spacing: -1px;
+    font-size: 18px;
+  }
+
+  .created{
+    color: #999;
+    font-size: 14px;
+  }
+}
+
+.job-action-box{
+  text-align: right;
+  margin-top: 25px;
+  margin-right: 25px;
+
+  div{
+    width: 200px;
+    display: inline;
+  }
+
+  .btn-lg{
+    width: 115px;
+  }
+}
+
+.job-content-box{
+  letter-spacing: 0.5px;
+
+  h4{
+    color: #004080;
+  }
+
+  .content-info{
+    min-height: 450px;
+    p{
+      line-height: 30px;
+    }
+  }
+
+  .mail-info{
+    margin-bottom: 75px;
+    font-size: 18px;
+
+    .email{
+      font-size: 16px;
+    }
+  }
+}
+//------ end job#show ------
