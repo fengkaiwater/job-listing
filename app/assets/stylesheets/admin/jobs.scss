@@ -71,14 +71,16 @@
 }
 
 .job-setup{
-  background: #fafafa;
-  margin-top: 50px;
+  background: #dcdacb;
+  margin-top: 100px;
   margin-bottom: 100px;
+
   padding-top: 20px;
   padding-bottom: 20px;
+
   box-shadow: 1px 3px 5px #333;
-  border: 5px solid #666;
-  border-radius: 25px;
+  border: 2px solid #666;
+  border-radius: 5px;
 
   opacity:0.95;
   filter:alpha(opacity=95);
@@ -108,8 +110,8 @@
   }
 
   .wage{
-    width: 50px;
-    border-radius: 5px;
+    width: 75px;
+    border-radius: 4px;
   }
 
   .wage-form{
