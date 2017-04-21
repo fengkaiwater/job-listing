@@ -1,10 +1,45 @@
-<div class="search-result">
-
-  <table class="table table-borderd">
-    <% @jobs.each do |job| %>
-      <%= link_to(render_highlight_content(job,@query_string),job_path(job)) %>
-      <hr>
-    <% end %>
- </table>
-
+<!-- no comfortable search result -->
+<% if @jobs.blank?%>
+<div class="col-md-10 col-md-offset-1">
+  <div class="search-error">
+    <h2>没有符合搜索条件的资料哦！</h2><br />
+    <p><%= link_to("立即查看工作", jobs_path, class: "btn btn-lg btn-success") %></p>
+  </div>
 </div>
+<!-- /. no comfortable search result -->
+
+<!-- search result -->
+<% else %>
+<div class="col-md-10 col-md-offset-1 job-content">
+  <h1><sapn class="fa fa-search-plus"></sapn> 搜索结果</h1>
+  <!-- job list -->
+  <div class="main-box">
+    <% @jobs.each do |job| %>
+
+      <div class="col-md-9 col-xs-9 job-box row">
+        <!-- title message -->
+        <div class="info">
+          <div class="info-top">
+            <h3><%= link_to(job.title, job_path(job))%></h3>
+            <span><%= job.created_at.strftime("%Y-%m-%d") %></span>
+          </div>
+          <div class="info-mid">
+            <%= job.wage_lower_bound %> k ~ <%= job.wage_upper_bound %> k
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+  <!-- /.job listing -->
+
+  <!-- will_paginate -->
+  <div class="col-md-10 col-md-offset-1 job-bottom">
+    <div>
+      <%= will_paginate @jobs %>
+    </div>
+  </div>
+  <!-- /. will_paginate -->
+</div>
+<% end %>
+<!-- /.search result -->

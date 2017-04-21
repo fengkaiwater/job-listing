@@ -1,9 +1,19 @@
-<h2>Submit Resume to <%= @job.title %></h2>
-
-<hr/>
-
-<%= simple_form_for [@job, @resume] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :attachment %>
-  <%= f.submit "Submit" %>
-<% end %>
+<div class="col-md-6 col-md-offset-3 job-resume-box">
+  <h3><span class="fa fa-address-card-o" aria-hidden="true"> 投递简历</h3>
+  <hr>
+  <div class="job-info-box">
+    <h3><span class="fa fa-paperclip" aria-hidden="true"></span> <%= @job.title %></h3>
+  </div>
+  <hr />
+  <div>
+  <%= simple_form_for [@job,@resume] do |f| %>
+    <div>
+      <%= f.input :content, :label => false, placeholder: '请输入简历描述', input_html: { class: 'resume-content' }  %>
+      <%= f.input :attachment, label: '上传简历', input_html: { class: 'resume-attachment' }  %>
+    </div>
+    <div class="form-actions-resume">
+      <%= f.submit "立即投递", disable_with: "Submiting...", class: "button"%>
+    </div>
+  <% end %>
+  </div>
+</div>
