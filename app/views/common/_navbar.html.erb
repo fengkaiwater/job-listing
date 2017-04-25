@@ -6,25 +6,25 @@
           <a class="navbar-brand" href="/"><i class="fa fa-paper-plane-o" aria-hidden="true">-Home Page</i></a>
         </li>
         <li class="active">
-          <a href="/jobs">Job Listing</a>
+          <a href="/jobs">工作职位</a>
         </li>
       </ul>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <!-- search not include function -->
-        <div class="col-xs-6 col-md-4">
-          <%= form_tag search_jobs_path, :method => :get, :class => "navbar-form navbar-left" do %>
-            <div class="input-group">
-              <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索职位...">
-              <span class="input-group-btn">
-                <button type="submit" class="btn btn-default">
-                  <span class="glyphicon glyphicon-search"></span>
-                </button>
-              </span>
-            </div>
-          <% end %>
-        </div>
+      <div class="col-xs-6 col-md-4">
+        <%= form_tag search_jobs_path, :method => :get, :class => "navbar-form navbar-left" do %>
+          <div class="input-group">
+            <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索职位...">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        <% end %>
+      </div>
       <!-- /.search not include function -->
 
       <!-- for devise -->
