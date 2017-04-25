@@ -1,4 +1,4 @@
-class JobsController < ApplicationController
+class Admin::JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -12,7 +12,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     if @job.save
-      redirect_to jobs_path, notice: "Create Success!"
+      redirect_to admin_jobs_path, notice: "Create Success!"
     else
       render :new
     end
@@ -25,7 +25,7 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     if @job.update(job_params)
-      redirect_to jobs_path, notice: "Update Success!"
+      redirect_to admin_jobs_path, notice: "Update Success!"
     else
       render :new
     end
@@ -38,7 +38,7 @@ class JobsController < ApplicationController
   def destroy
     @job = Job.find(params[:id])
     @job.destroy
-    redirect_to jobs_path, alert: "Delete Success!"
+    redirect_to admin_jobs_path, alert: "Delete Success!"
   end
 
   private
