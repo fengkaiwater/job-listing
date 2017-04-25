@@ -206,7 +206,7 @@ footer .footer-below {
 .our-experts{
    background-color: #F2F2F2;
    margin-top: 0px;
-   margin-bottom: -40px;
+   margin-bottom: 0px;
 
    p{
      letter-spacing: 1px;
@@ -252,7 +252,35 @@ p.index-content{
 }
 //------ end the second section(web description) ------
 
+//------ the third section(service advantage) ------
+.what-we-do{
+   text-align: center;
 
+   img{
+     margin-top: 35px;
+     margin-bottom: -35px;
+     width: 100px;
+   }
+}
+
+.what-we-do .do-box{
+   border: 1px solid transparent;
+}
+
+.do-box h3{
+   margin-top: 60px;
+   margin-bottom: 20px;
+   font-size: 18px;
+   letter-spacing: 1px;
+}
+
+.do-box p {
+   color: #666;
+   letter-spacing: 1px;
+   line-height: 22px;
+   margin: 40px 25px 40px 25px;
+}
+//------ end the third section(service advantage) ------
 
 
 
@@ -1108,34 +1136,7 @@ p.index-content{
    padding: 5px 0
 }
 
-/*===== what we do ====*/
-.what-we-do{
-   text-align: center;
 
-   img{
-     margin-top: 35px;
-     margin-bottom: -35px;
-     width: 100px;
-   }
-}
-
-.what-we-do .do-box{
-   border: 1px solid transparent;
-}
-
-.do-box h3{
-   margin-top: 60px;
-   margin-bottom: 20px;
-   font-size: 18px;
-   letter-spacing: 1px;
-}
-
-.do-box p {
-   color: #666;
-   letter-spacing: 1px;
-   line-height: 22px;
-   margin: 40px 25px 40px 25px;
-}
 
 
 /*===== about us ====*/
