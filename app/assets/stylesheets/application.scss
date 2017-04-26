@@ -70,6 +70,14 @@ footer .footer-below {
     padding: 25px 0;
     background-color: #364c63;
 }
+
+footer .footer-below > p > a:hover,
+footer .footer-below > p > a:focus {
+    color: #d18440;
+    background-color: transparent;
+}
+
+
 //------end footer------
 
 //------ login modal ------
@@ -217,7 +225,7 @@ footer .footer-below {
    }
 
    img{
-     width: 220px;
+     width: 200px;
    }
 
 }
@@ -282,18 +290,78 @@ p.index-content{
 }
 //------ end the third section(service advantage) ------
 
+//------ the forth section(hot title) ------
+.our-experts .expert-box{
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        width: 80px;
+        margin-top: 8px;
+    }
+}
+
+.our-experts .category-list{
+  text-align: center;
+
+  h3{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+  p{
+    letter-spacing: 1px;
+    color: #666;
+  }
+}
+
+.our-experts .category-list:hover{
+  .expert-box{
+    border: 2px solid #d18440;
+  }
+  h3{
+    color: #d18440;
+  }
+}
+//------ end the forth section(hot title) ------
+
+//------ the fifth section(join us) ------
+.bottom-pic-center {
+  float: none;
+  margin: 0 auto;
+}
+
+.btn.btn-primary-bottom{
+  background-color: transparent;
+  color: #0f0402;
+  border-color: #cfb39d;
+  padding: 7px 8px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+
+.btn.btn-primary-bottom:hover{
+  background-color: #952c22;
+  border-color: #952c22;
+  color: #fff;
+}
+//------- end the fifth section(join us) ------
 
 
 
 
-
-
-
-
-
+//需要更改部分：
 /*===== Job ====*/
 .job-content{
- min-height: 725px;
+ min-height: 45px;
  margin-top: 100px;
 
  a{
@@ -1323,59 +1391,7 @@ p.index-content{
 
 
 
-/*===== talk about us ====*/
-.talk-about-us{
-   padding-bottom: 160px;
-   padding-top: 60px;
-   color: #666;
-}
 
-.talk-about-us strong{
-   margin-top: 25px;
-   color: #4A6BB5;
-   font-weight: 600;
-   font-style: italic;
-}
-
-.talk-about-us .item > img{
-   width: 80px;
-   height: 80px;
-   margin: 0 auto;
-   border-radius: 50%;
-   border: 2px solid #ccc;
-   margin-bottom: 10px;
-}
-
-.talk-about-us .item > p{
-   max-width: 600px;
-   letter-spacing: 1px;
-   margin: 0 auto;
-   line-height: 2;
-   margin-bottom: 20px;
-}
-
-.talk-about-us .carousel-indicators > li {
-   background-color: #dcdcdc;
-   border: 0 none;
-   height: 10px;
-   margin: 1px;
-   width: 10px;
-   border-radius: 0;
-   margin: 0 5px;
-   -moz-transform: rotate(45deg);
-   -webkit-transform: rotate(45deg);
-   -o-transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   transform: rotate(45deg);
-}
-
-.talk-about-us .carousel-indicators li.active {
-   background-color: #4A6BB5;
-}
-
-.talk-about-us .carousel-indicators {
-   bottom: -70px;
-}
 
 /*===== our client ====*/
 .support{
