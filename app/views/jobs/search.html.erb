@@ -20,7 +20,7 @@
         <!-- title message -->
         <div class="info">
           <div class="info-top">
-            <h3><%= link_to(job.title, job_path(job))%></h3>
+            <h3><%= link_to(render_highlight_content(job,@query_string),job_path(job))%></h3>
             <span><%= job.created_at.strftime("%Y-%m-%d") %></span>
           </div>
           <div class="info-mid">
