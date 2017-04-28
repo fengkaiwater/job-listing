@@ -1,6 +1,12 @@
 class Account::UsersController < ApplicationController
   before_action :authenticate_user!
 
+
+
+  def show
+    @user = current_user
+  end
+
   def edit
     @user = current_user
   end
@@ -9,7 +15,7 @@ class Account::UsersController < ApplicationController
     @user = current_user
     if @user.update(user_params)
       flash[:notice] = "Update Success"
-      redirect_to account_users_path
+      redirect_to account_user_path
     else
       render :edit
     end

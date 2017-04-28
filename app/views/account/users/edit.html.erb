@@ -1,9 +1,14 @@
-<h2>Edit my files</h2>
-<%= simple_form_for [:account, @user] do |f| %>
-<div>
-  <%= f.input :username, :label => "Username" %>
-  <%= f.input :email, :label => "E-mail" %>
-  <%= link_to("Cancel update", account_users_path, class: "btn btn-default") %>
-  <%= f.submit "Submit", class: "btn btn-danger" %>
+<div class="col-md-4 col-md-offset-4  job-setup" >
+  <div class="col-md-12 job-form-content">
+
+    <h2><span class="fa fa-pencil-square-o"></span>编辑我的资料</h2>
+    <%= simple_form_for [:account, @user] do |f| %>
+    <div>
+      <%= f.input :username, :label => "用户名" %>
+      <%= f.input :email, :label => "邮箱" %>
+      <%= link_to("取消", account_user_path, class: "btn btn-default") %>
+      <%= f.submit "确认修改", class: "btn btn-danger" %>
+    </div>
+    <% end %>
+  </div>
 </div>
-<% end %>
