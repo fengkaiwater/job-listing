@@ -1,0 +1,160 @@
+
+<!-- the first section(head PIC)-->
+<section class="intro">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="intro-content">
+        <h1>HELLO AIR - 专业的航空招聘网站</h1>
+        <p>国际顶尖的航空企业，最具创造力的运营团队</p>
+        <p>
+          <a class="btn btn-primary-welcome" href="jobs" role="button">开启职业生涯</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /. the first section(head PIC) -->
+
+<!-- the second section(web description) -->
+<section id="feature" class="our-experts">
+  <div class="container">
+      <div class="row">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h2 class="section-title">活在未来，等待自己的到来</h2>
+            <div class="short-line"></div>
+            <p class="index-content">
+              HELLOAIR招聘网站由知名航空服务企业--哈罗航空全资投资。<br/>
+              利用神经网络算法，大数据推演，分析全球各大航空企业的职位需求。<br/>
+              创建了定向推送方式，与Facebook的广告推送算法有异曲同工之妙，<br/>
+              精准匹配企业人事战略需求和专业人才的职业生涯导向。
+            </p>
+            <%= image_tag("folder-travel.png") %>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<!-- /. the second section(web description) -->
+
+<!-- the third section(service advantage) -->
+<section id="service" class="what-we-do">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <h2 class="section-title">专业之路</h2>
+        <div class="short-line"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="do-box">
+              <%= image_tag("career.png") %>
+              <h3>职业生涯</h3>
+              <p>极速成长，薪水翻倍，成为专业选手，走向职业生涯的巅峰.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="do-box">
+              <%= image_tag("team.png") %>
+              <h3>精英团队</h3>
+              <p>找到理想的工作，最靠谱的老板，高格调的团队，百万年薪不是梦 。</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="do-box">
+              <%= image_tag("serendipity.png") %>
+              <h3>Serendipity</h3>
+              <p>赚到人生第一桶金，邂逅幸运女神，开启财富自由之门。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /.the third section(service advantage) -->
+
+<!-- the forth section(hot title) -->
+<section id="genius" class="our-experts">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h2 class="section-title">热门推荐</h2>
+            <div class="short-line"></div>
+          </div>
+        </div>
+
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 category-list">
+                <%= link_to jobs_path(:category => "飞行") , class: "category_1" do %>
+                  <div class="expert-box">
+                      <%= image_tag("pilot.png") %>
+                  </div>
+                  <div>
+                    <h3>飞行员</h3>
+                    <p>Pilot</p>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-md-3 category-list">
+                <%= link_to jobs_path(:category => "空乘") , class: "category_2" do %>
+                  <div class="expert-box">
+                      <%= image_tag("attendand.png") %>
+                  </div>
+                  <div>
+                    <h3>乘务员</h3>
+                    <p>Attendand</p>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-md-3 category-list">
+                <%= link_to jobs_path(:category => "机务") , class: "category_3" do %>
+                  <div class="expert-box">
+                      <%= image_tag("engineer.png") %>
+                  </div>
+                  <div>
+                    <h3>工程师</h3>
+                    <p>Engineer</p>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-md-3 category-list">
+                <%= link_to jobs_path , class: "category_all" do %>
+                  <div class="expert-box">
+                      <%= image_tag("all-title.png") %>
+                  </div>
+                  <div>
+                    <h3>所有职位</h3>
+                    <p>All Jobs</p>
+                  </div>
+                <% end %>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /.the forth section(hot title) -->
+
+<!-- the fifth section(our member)-->
+<section >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 bottom-pic-center" style="">
+        <img src="https://ww4.sinaimg.cn/large/006tNbRwly1ff08cozs64j30q908r44g.jpg">
+        <p class="col-md-2 bottom-pic-center">
+          <a class="btn btn-primary-bottom" href="jobs" role="button">开启职业生涯</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /.the fifth section(our member)-->
