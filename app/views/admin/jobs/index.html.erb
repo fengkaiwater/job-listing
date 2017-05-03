@@ -2,7 +2,7 @@
   <%= link_to("Add a job", new_admin_job_path, :class => "btn btn-info") %>
 </div>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-striped custab">
   <thead>
     <tr>
       <th>#</th>
@@ -27,13 +27,14 @@
       <td><%= job.wage_upper_bound %></td>
       <td><%= job.contact_email %></td>
       <td>
-        <%= link_to("Edit", edit_admin_job_path(job)) %>
-        <%= link_to("Delete", admin_job_path(job), method: :delete, :data => { :confirm => "Are you sure?" }) %>
-
+        <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
+        |
+        <%= link_to("Delete", admin_job_path(job), method: :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" }) %>
+        |
         <% if job.is_hidden %>
-          <%= link_to("Public", publish_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-info") %>
+          <%= link_to("Public", publish_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-success") %>
         <% else %>
-          <%= link_to("Hide", hide_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-danger") %>
+          <%= link_to("Hide", hide_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-warning") %>
         <% end %>
       </td>
       <td><%= job.created_at.strftime("%Y-%m-%d (%Z)") %></td>
