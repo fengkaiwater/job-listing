@@ -257,3 +257,16 @@
 .login-help{
   font-size: 12px;
 }
+
+/* back to top  */
+#gotop {                         //id
+  width: 38px;
+  height: 38px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  // color: rgb(170, 170, 170);
+  background: rgb(221, 221, 221);
+  display: none;                 //默认先隐藏掉
+}
